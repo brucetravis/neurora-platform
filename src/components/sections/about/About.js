@@ -36,7 +36,16 @@ export default function About() {
     
   return (
     <section className='about-section'>
-        <h6 className='title' ref={titleSpring}>About The Platform</h6>
+        <animated.h6 
+            className='title' 
+            ref={ref}
+            style={{
+                ...titleSpring,
+                width: '100%'
+            }}
+        >
+            About The Platform
+        </animated.h6>
 
         <div className='about-content'>
             <animated.div
@@ -51,7 +60,6 @@ export default function About() {
                     src={require('../../../videos/robot-unscreen.gif')}
                     alt="About AI"
                 />
-
             </animated.div>
 
             
