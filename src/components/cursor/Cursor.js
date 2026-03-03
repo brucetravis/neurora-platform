@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Cursor.css'
+import { Sparkles } from 'lucide-react'
 
 export default function Cursor() {
 
@@ -36,13 +37,15 @@ export default function Cursor() {
 
   return (
     <>
-        <div 
+        <div
             className='custom-cursor'
             style={{
                 left: `${position.x}px`,
                 top: `${position.y}px`
             }}
-        />
+        >
+            
+        </div>
 
         {/* trail */}
         {trail.map((t, i) => (
@@ -52,7 +55,7 @@ export default function Cursor() {
                 style={{
                     left: `${t.x}px`,
                     top: `${t.y}px`,
-                    opacity: 1 / trail.length,
+                    opacity: (1 + 1) / trail.length,
                     transform: `translate(-50%, -50%) scale(${i / trail.length}) rotate(${Math.random() * 360}deg)`
                 }}
             />
