@@ -1,7 +1,7 @@
 .custom-cursor {
   position: fixed;
   z-index: 99999;
-  pointer-events: none; /* So it doesn't block clicks */
+  points-events: none; /* So it doesn't block clicks */
   /* width: 15px; */
   /* height: 15px; */
   width: 0;
@@ -14,7 +14,7 @@
 
 .trail-dot {
   position: fixed;
-  pointer-events: none;
+  points-events: none;
   width: 100px;
   height: 100px;
   border-radius: 50%;

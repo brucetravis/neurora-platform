@@ -1,0 +1,41 @@
+.points-card {
+  background: rgba(25, 6, 54, 0.8);
+  border-radius: 1rem;
+  padding: 2rem;
+  min-height: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+
+.points-card:hover {
+  cursor: pointer;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(184, 135, 219, 0.2);
+}
+
+.points-title {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.points-desc {
+  color: rgba(230,226,240,0.85);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.points-card:hover .icon-wrapper {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px #c87cff);
+}

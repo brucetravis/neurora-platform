@@ -1,0 +1,20 @@
+.whyus-section {
+    padding: 50px 20px 20px 20px;
+}
+
+.whyus-section .title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 20px 0 50px 0;
+    padding: 0;
+}
+
+.whyus-section .whyus-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+
