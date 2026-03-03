@@ -46,7 +46,7 @@ export default function Product() {
             ))}
         </div>
         
-        <button className='product-btn'>Adopt with Neurora</button>
+        <button className='product-btn'>About Our Platform</button>
     </section>
   )
 }
