@@ -36,4 +36,16 @@
 }
 
 
+@media screen and (max-width: 762px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-section .right-column p {
+        max-width:700px;
+        font-size: 14px;
+        line-height: 4vh;
+    }
+}
+
 
