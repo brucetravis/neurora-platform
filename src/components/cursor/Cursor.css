@@ -1,0 +1,25 @@
+.custom-cursor {
+    position: fixed;
+    z-index: 99999;
+    pointer-events: none; /* So it doesn't block clicks */
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%; /* circle */
+    background-color: rgba(255, 200, 0, 0.6); /* semi transparent yellow*/
+    transform: translate(-50%, -50%); /* center on mouse */
+    transition: all 0.1s ease; /* smooth flow */
+}
+
+.trail-dot {
+  position: fixed;
+  pointer-events: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(255, 200, 0, 0.6);
+  z-index: 9998;
+  transition: transform 0.1s linear, opacity 0.1s linear;
+}
+
