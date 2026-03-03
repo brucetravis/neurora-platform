@@ -1,0 +1,98 @@
+.product-section {
+    padding: 50px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product-section .title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+.product-section .product-models {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+    gap: 100px;
+    padding: 50px;
+}
+
+
+.product-section .product-models .model {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.product-section .product-models .model:hover {
+    cursor: pointer;
+    transform: translateY(-5px)
+}
+
+
+.product-section .product-models .model img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.product-section .product-models .model.claude-ai {
+    background: rgb(232, 188, 174, 0.6);
+}
+
+.product-section .product-models .model.synthesia-ai {
+    background: rgb(219, 226, 247, 0.6);
+}
+
+.product-section .product-models .model.copilot-ai {
+    background: rgba(253, 225, 202, 0.6);
+}
+
+.product-section .product-models .model.jasper-ai {
+    background: rgba(233, 168, 229, 0.6);
+}
+
+.product-section .product-models .model.gemini-ai {
+    background: rgba(167, 152, 209, 0.6);
+}
+
+
+.product-section .product-models .model.deepseek-ai {
+    background: rgb(140, 189, 237, 0.6);
+}
+
+
+.product-section .product-models .model.grok-ai {
+    background: rgba(231, 204, 158, 0.6);
+}
+
+
+.product-section .product-models .model.chat-ai {
+    background: rgba(228, 223, 219, 0.6);
+}
+
+.product-section .product-btn {
+    border: 2px solid rgb(71, 41, 107);
+    background: none;
+    color: rgb(71, 41, 107);
+    padding: 15px 30px;
+    margin-top: 5vh;
+    font-size: 14px;
+    transition: all 0.5s ease-in-out;
+}
+
+.product-section .product-btn:hover {
+  background: rgb(46, 23, 73);
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
