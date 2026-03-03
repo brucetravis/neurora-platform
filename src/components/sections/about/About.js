@@ -43,7 +43,6 @@ export default function About() {
                 ...titleSpring,
                 width: '100%'
             }}
-
         >
             About The Platform
         </animated.h6>
@@ -61,7 +60,6 @@ export default function About() {
                     src={require('../../../videos/robot-unscreen.gif')}
                     alt="About AI"
                 />
-
             </animated.div>
 
             

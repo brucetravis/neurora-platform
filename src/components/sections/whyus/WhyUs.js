@@ -72,12 +72,22 @@ export default function WhyUs() {
 
   return (
     <section className='whyus-section' ref={ref}>
-        <animated.h6 className='title' ref={titleSpring}>What We Offer</animated.h6>
+        <animated.h6 
+            className='title' 
+            ref={ref}
+            style={{
+                ...titleSpring,
+                width: '100%'
+            }}
+        >
+            What We Offer
+
+        </animated.h6>
         
         <div className='whyus-content'>
-            {points.map((p) => (
+            {points.map((p, idx) => (
                 <Points
-                    key={p.id}
+                    key={idx}
                     icon={p.icon}
                     title={p.title}
                     content={p.description}
