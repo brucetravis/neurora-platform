@@ -3,6 +3,7 @@ import './Landing.css'
 import Hero from '../../components/sections/hero/Hero'
 import Product from '../../components/sections/product/Product'
 import WhyUs from '../../components/sections/whyus/WhyUs'
+import IndustryProducts from '../../components/sections/industryproducts/IndustryProducts'
 
 export default function Landing() {
   return (
@@ -10,6 +11,7 @@ export default function Landing() {
       <Hero />
       <Product />
       <WhyUs />
+      <IndustryProducts />
     </section>
   )
 }
