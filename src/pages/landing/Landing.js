@@ -9,6 +9,7 @@ export default function Landing() {
     <section className='landing-page'>
       <Hero />
       <Product />
+      <WhyUs />
     </section>
   )
 }
