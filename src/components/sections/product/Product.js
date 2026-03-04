@@ -3,7 +3,6 @@ import './Product.css'
 import { useInView } from 'react-intersection-observer'
 import { useSpring, animated } from 'react-spring'
 import aiProducts from '../../../data/products'
-import Button from '../../../components/buttons/Button'
 
 export default function Product() {
     // inView state
@@ -19,9 +18,24 @@ export default function Product() {
         config: { mass: 1, tension: 80, friction: 25 }
     })
 
+    // upSpring
+    const upSpring = useSpring({
+        transform: inView ? 'translateY(0%)' : 'translateY(-50%)',
+        opacity: inView ? 1 : 0,
+        config: { mass: 1, tension: 80, friction: 25 }
+    })
+
+    // downSpring
+    const downSpring = useSpring({
+        transform: inView ? 'translateY(0%)' : 'translateY(50%)',
+        opacity: inView ? 1 : 0,
+        config: { mass: 1, tension: 80, friction: 25 }
+    })
+
   return (
-    <section className='product-section' ref={ref}>
+    <section className='product-section'>
         <animated.h6
+            ref={ref}
             style={{
                 ...titleSpring,
                 width: '100%'
@@ -33,20 +47,33 @@ export default function Product() {
 
         <div className='product-models'>
             {aiProducts.map((p) => (
-                <div
+                <animated.div
+                    ref={ref}
                     key={p.id}
                     className={`model ${p.className}`}
+                    style={{
+                        ...p.spring === 'up' ? upSpring : downSpring,
+                        width: '100%'
+                    }}
                 >
                     <img 
                         src={p.image}
                         alt={p.product}
                     />
                     {p.product}
-                </div>
+                </animated.div>
             ))}
         </div>
         
-        <button className='product-btn'>About Our Platform</button>
+        <animated.button
+            ref={ref}
+            className='product-btn'
+            style={{
+                ...upSpring
+            }}
+        >
+            About Our Platform
+        </animated.button>
     </section>
   )
 }
