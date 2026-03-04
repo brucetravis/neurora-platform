@@ -2,8 +2,9 @@ import React from 'react'
 import './WhyUs.css'
 import { useSpring, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
-import { BarChart2, Compass, CreditCard, Settings, TrendingUp } from 'lucide-react'
-import Points from '../../cards/whyus/Points'
+import Button from '../../buttons/Button'
+// import { BarChart2, Compass, CreditCard, Settings, TrendingUp } from 'lucide-react'
+// import Points from '../../cards/whyus/Points'
 
 export default function WhyUs() {
     const [ ref, inView ] = useInView({
@@ -12,15 +13,15 @@ export default function WhyUs() {
     })
 
     // titleSpring
-    const titleSpring = useSpring({
-        transform: inView ? 'translateY(0%)' : 'translateY(50%)', // hidden at the top
-        opacity: inView ? 1 : 0,
-        config: { mass: 1, tension: 80, friction: 25 },
-        delay: 200
-    })
+    // const titleSpring = useSpring({
+    //     transform: inView ? 'translateY(0%)' : 'translateY(50%)', // hidden at the top
+    //     opacity: inView ? 1 : 0,
+    //     config: { mass: 1, tension: 80, friction: 25 },
+    //     delay: 200
+    // })
 
     // animated card up
-    const cardUpSpring = useSpring({
+    const leftSideSpring = useSpring({
         transform: inView ? 'translateY(0%)' : 'translateY(-50%)', // hidden at the top
         opacity: inView ? 1 : 0,
         config: { mass: 1, tension: 80, friction: 25 },
@@ -28,73 +29,76 @@ export default function WhyUs() {
     })
     
     // animated card down
-    const cardDownSpring = useSpring({
+    const rightSideSpring = useSpring({
         transform: inView ? 'translateY(0%)' : 'translateY(50%)', // hidden at the top
         opacity: inView ? 1 : 0,
         config: { mass: 1, tension: 80, friction: 25 },
         delay: 200
     })
-
-    const points = [
-        { 
-            icon: <Compass size={32} color="#c87cff" />, 
-            title: 'Entry-Level Guidance', 
-            description: 'Get step-by-step recommendations on which AI tools to adopt for your specific business and industry.',
-            animationStyle: cardUpSpring
-        },
-        { 
-            icon: <CreditCard size={32} color="#c87cff" />, 
-            title: 'Subscription Management', 
-            description: 'Easily subscribe, manage, and consolidate AI tools in one platform, ensuring you never lose track of your investments.',
-            animationStyle: cardDownSpring
-        },
-        { 
-            icon: <BarChart2 size={32} color="#c87cff" />, 
-            title: 'Analytics & Insights', 
-            description: 'Track AI performance in real time, understand what works, and make data-driven decisions to optimize ROI.',
-            animationStyle: cardUpSpring
-        },
-        { 
-            icon: <Settings size={32} color="#c87cff" />, 
-            title: 'Automation & Efficiency', 
-            description: 'Implement AI-driven automation that improves workflow efficiency while monitoring impact and adoption.',
-            animationStyle: cardDownSpring
-        },
-        { 
-            icon: <TrendingUp size={32} color="#c87cff" />, 
-            title: 'Growth Recommendations', 
-            description: 'Receive tailored suggestions on which AI features to scale, helping your business grow strategically and sustainably.',
-            animationStyle: cardUpSpring 
-        },
-    ]
-
     
 
   return (
     <section className='whyus-section' ref={ref}>
-        <animated.h6 
-            className='title' 
-            ref={ref}
+        <animated.div
+            className='left-column'
             style={{
-                ...titleSpring,
+                ...leftSideSpring,
                 width: '100%'
             }}
         >
-            What We Offer
 
-        </animated.h6>
-        
-        <div className='whyus-content'>
-            {points.map((p, idx) => (
-                <Points
-                    key={idx}
-                    icon={p.icon}
-                    title={p.title}
-                    content={p.description}
-                    animation={p.animationStyle}
+            <div>
+                <h6>Get Started with</h6>
+                <h3>Entry Level Adoption</h3>
+                <p>If you want to get started in your Adoption Journey</p>
+                <Button text='Get Started' />
+            </div>
+
+            <div>
+                <img 
+                    src='https://i.pinimg.com/1200x/be/6d/b7/be6db75139daceb45de7f15e1421552a.jpg'
+                    alt='AI chat'
+                    className='chatImage'
                 />
-            ))}
-        </div>
+
+                <img 
+                    src={require('../../../videos/robot-unscreen.gif')}
+                    alt='AI chat'
+                    className='aiCopilot'
+                />
+            </div>
+
+        </animated.div>
+
+        <animated.div
+            className='right-column'
+            style={{
+                ...rightSideSpring,
+                width: '100%'
+            }}
+        >
+            <div>
+                <h6>Get Started with</h6>
+                <h3>Expert Level Adoption</h3>
+                <p>If you are wondering if the products you adopted are helping you.</p>
+                <Button text='Get Started' />
+            </div>
+
+            <div>
+                <img 
+                    src='https://i.pinimg.com/736x/12/78/29/127829fad1bba0d7f269c966e8874c81.jpg'
+                    alt='AI grok'
+                    className='chatImage'
+                />
+
+                <img 
+                    src='https://i.pinimg.com/736x/74/0b/15/740b15ae050b8de67aa05c6a5977aab2.jpg'
+                    alt='AI chat'
+                    className='deepseekImage'
+                />
+            </div>
+
+        </animated.div>
     </section>
   )
 }

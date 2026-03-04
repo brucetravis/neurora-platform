@@ -2,8 +2,13 @@
   position: fixed;
   z-index: 99999;
   pointer-events: none; /* So it doesn't block clicks */
+<<<<<<< HEAD
   width: 20px;
   height: 20px;
+=======
+  width: 15px;
+  height: 15px;
+>>>>>>> feat/whyus
   border-radius: 50%; /* circle */
   background-color: rgba(255, 200, 0, 0.6); /* semi transparent yellow*/
   transform: translate(-50%, -50%); /* center on mouse */
