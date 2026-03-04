@@ -58,7 +58,11 @@ export default function IndustryCard({ industry, photo, productPhoto, product, d
         </div>
 
          <div className='card-footer'>
-            <p>Adopt</p>
+
+            <input 
+                type='button'
+                value='Adopt'
+            />
 
             <Link>
                 View Details

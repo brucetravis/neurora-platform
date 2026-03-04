@@ -128,9 +128,18 @@
 }
 
 
-.industry-card .card-footer p {
+.industry-card .card-footer input {
+    background: none;
+    border: none;
+    padding: 2px 20px;
     color: #cc9a2d;
-    font-size: 18px;
-    font-weight: 700; 
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.industry-card .card-footer input:hover {
+    border: 1px solid #333;
+    background: rgba(255, 255, 255, 0.2);
 }
 
