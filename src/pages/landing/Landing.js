@@ -4,6 +4,7 @@ import Hero from '../../components/sections/hero/Hero'
 import Product from '../../components/sections/product/Product'
 import WhyUs from '../../components/sections/whyus/WhyUs'
 import IndustryProducts from '../../components/sections/industryproducts/IndustryProducts'
+import AIStats from '../../components/sections/stats/Stats'
 
 export default function Landing() {
   return (
@@ -12,6 +13,7 @@ export default function Landing() {
       <Product />
       <WhyUs />
       <IndustryProducts />
+      <AIStats />
     </section>
   )
 }
