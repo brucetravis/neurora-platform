@@ -33,9 +33,8 @@ export default function Product() {
     })
 
   return (
-    <section className='product-section'>
+    <section className='product-section' ref={ref}>
         <animated.h6
-            ref={ref}
             style={{
                 ...titleSpring,
                 width: '100%'
@@ -48,7 +47,6 @@ export default function Product() {
         <div className='product-models'>
             {aiProducts.map((p) => (
                 <animated.div
-                    ref={ref}
                     key={p.id}
                     className={`model ${p.className}`}
                     style={{
@@ -66,7 +64,6 @@ export default function Product() {
         </div>
         
         <animated.button
-            ref={ref}
             className='product-btn'
             style={{
                 ...upSpring
