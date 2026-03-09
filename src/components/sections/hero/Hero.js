@@ -1,10 +1,11 @@
 import React from 'react'
 import './Hero.css'
 import { BiBulb } from 'react-icons/bi'
-import Button from '../../../components/buttons/Button'
+
 import { useInView } from 'react-intersection-observer'
 import { useSpring, animated } from 'react-spring'
 import Stats from '../../cards/herostats/Stats'
+import Button from '../../buttons/navBtn/Button'
 // import { animated, useInView, useSpring } from 'react-spring'
 // import RobotGif from '../../../videos/robot-unscreen.gif'
 

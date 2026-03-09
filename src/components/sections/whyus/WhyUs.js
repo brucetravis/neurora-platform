@@ -2,7 +2,7 @@ import React from 'react'
 import './WhyUs.css'
 import { useSpring, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
-import Button from '../../buttons/Button'
+import Button from '../../buttons/navBtn/Button'
 // import { BarChart2, Compass, CreditCard, Settings, TrendingUp } from 'lucide-react'
 // import Points from '../../cards/whyus/Points'
 

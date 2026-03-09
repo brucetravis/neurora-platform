@@ -1,6 +1,6 @@
 import React from 'react'
 import './ProductCategories.css'
-import Button from '../../buttons/Button'
+import Button from '../../buttons/navBtn/Button'
 import productCategories from '../../../data/productCategories'
 import { useInView } from 'react-intersection-observer'
 import { useSpring, animated } from 'react-spring'
