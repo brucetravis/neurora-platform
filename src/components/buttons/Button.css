@@ -9,6 +9,6 @@ button {
 }
 
 button:hover {
-  background: rgb(46, 23, 73);
+  background: #2e1749;
   cursor: pointer;
 }

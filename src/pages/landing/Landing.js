@@ -6,6 +6,7 @@ import WhyUs from '../../components/sections/whyus/WhyUs'
 import IndustryProducts from '../../components/sections/industryproducts/IndustryProducts'
 import AIStats from '../../components/sections/stats/Stats'
 import ProductCategories from '../../components/sections/productcategories/ProductCategories'
+import Success from '../../components/sections/success/Success'
 
 export default function Landing() {
   return (
@@ -16,6 +17,7 @@ export default function Landing() {
       <IndustryProducts />
       <AIStats />
       <ProductCategories />
+      <Success />
     </section>
   )
 }
