@@ -7,6 +7,7 @@ import IndustryProducts from '../../components/sections/industryproducts/Industr
 import AIStats from '../../components/sections/stats/Stats'
 import ProductCategories from '../../components/sections/productcategories/ProductCategories'
 import Success from '../../components/sections/success/Success'
+import News from '../../components/sections/news/News'
 
 export default function Landing() {
   return (
@@ -18,6 +19,7 @@ export default function Landing() {
       <AIStats />
       <ProductCategories />
       <Success />
+      <News />
     </section>
   )
 }
