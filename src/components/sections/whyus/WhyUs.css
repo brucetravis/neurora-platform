@@ -1,20 +1,74 @@
 .whyus-section {
-    padding: 50px 20px 20px 20px;
+    padding: 50px 50px 20px 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.whyus-section .title {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 20px 0 50px 0;
-    padding: 0;
+.whyus-section .left-column,
+.whyus-section .right-column {
+    border-radius: 10px;
+    padding: 50px 20px 50px 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
-.whyus-section .whyus-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
-    margin: 0 auto;
+
+.whyus-section .left-column:hover,
+.whyus-section .right-column:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
 }
 
+.whyus-section h6 {
+    color: rgb(71, 41, 107);
+}
+
+.whyus-section h3 {
+    font-size: 40px;
+}
+
+
+.whyus-section .left-column {
+    background: rgb(247, 247, 247);
+}
+
+.whyus-section .right-column {
+    background: rgb(230, 240, 252);
+}
+
+.whyus-section .left-column .chatImage,
+.whyus-section .right-column .chatImage {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    position: absolute;
+    top: 3vh;
+    right: 15vw;
+}
+
+.whyus-section .left-column .aiCopilot {
+    height: 25vh;
+    width: 12vw;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    top: 10vh;
+    right: 1vw;
+}
+
+
+.whyus-section .right-column .deepseekImage {
+    height: 25vh;
+    width: 12vw;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    top: 10vh;
+    right: 1vw;
+}
 
