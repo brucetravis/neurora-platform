@@ -10,7 +10,7 @@ export default function Button({ text }) {
   return (
     <div>
       <button
-        onClick={navigate}
+        onClick={() => navigate}
       >
         { text }
       </button>
