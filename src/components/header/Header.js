@@ -8,12 +8,12 @@ export default function Header() {
     
     // An array of pages
     const pages = [
-        { id: 1, name: "Home", path: "/", color: '#2b1349' },
-        { id: 2, name: "About", path: "/aboutPage", color: '#2b1349'  },
-        { id: 3, name: "Adoption", path: "/adoption", color: '#2b1349'  },
-        { id: 4, name: "AI Products", path: "/products", color: '#2b1349'  },
-        { id: 5, name: "Industries", path: "/industries", color: '#2b1349'  },
-        { id: 6, name: "News", path: "/news", color: '#2b1349'  }
+        { id: 1, name: "Home", path: "/" },
+        { id: 2, name: "About", path: "/aboutPage"  },
+        { id: 3, name: "Adoption", path: "/adoption"  },
+        { id: 4, name: "AI Products", path: "/products"  },
+        { id: 5, name: "Industries", path: "/industries"  },
+        { id: 6, name: "News", path: "/news"  }
     ]
 
     // state to track the last scrolling position
@@ -24,6 +24,8 @@ export default function Header() {
 
     // statw to know if the user has scrolled so that we acn add teh background
     const [ scrolled, setScrolled ] = useState(false) // initially the user has not scrolled
+
+    const [isHover, setIsHover] = useState(false)
 
     // inView state
     const [ ref, inView ] = useInView({
@@ -54,6 +56,16 @@ export default function Header() {
         config: { mass: 1, tension: 80, friction: 25 },
         delay: 200
     })
+
+    const buttonStyle = {
+        background: isHover ? 'rgb(43, 19, 73, 0.8)' : 'none',
+        color: isHover ? '#fff' : '#2b1349',
+        border: '2px solid #2b1349',
+        padding: '5px 40px',
+        borderRadius: '50px',
+        cursor: 'pointer',
+        transition: 'all 0.3s ease',
+    }
     
     // useLocation to track the loacation of the page
     const location = useLocation()
@@ -116,7 +128,12 @@ export default function Header() {
                 <Link
                     key={p.id}
                     to={p.path}
-                    className={location.pathname === '/aboutPage' ? "text-white": p.color }
+                    // className={`${location.pathname === '/aboutPage' ? "text-white": ''}`}
+                    style={{
+                        color: location.pathname === '/aboutPage' && !scrolled
+                                ? 'white' 
+                                : '#2b1349'
+                    }}
                 >
                     {p.name}
                 </Link>
@@ -130,6 +147,9 @@ export default function Header() {
         >
             <button
                 className='login-btn'
+                style={buttonStyle}
+                onMouseEnter={() => setIsHover(true)}
+                onMouseLeave={() => setIsHover(false)}
             >
                 Login
             </button>

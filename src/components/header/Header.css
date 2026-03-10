@@ -10,7 +10,6 @@
     left: 0;
     z-index: 999;
     box-sizing: border-box;
-    backdrop-filter: blur(12px);
 }
 
 .header.show {
@@ -21,12 +20,20 @@
 .header.hide {
     transform: translateY(-100%);
     box-shadow: -2px 0 4px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease
+    transition: transform 0.3s ease;
 }
 
 .header.scrolled {
     box-shadow: -2px 0 4px rgba(0, 0, 0, 0.3);
-    background: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+
+.header.scrolled .header-links a {
+    color: #2b1349;
+}
+
+.header .header-links a.text-white {
+    color: #fff; /* for About page when not scrolled */
 }
 
 .header .header-links {
