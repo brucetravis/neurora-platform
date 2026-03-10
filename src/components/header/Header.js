@@ -27,6 +27,11 @@ export default function Header() {
 
     const [isHover, setIsHover] = useState(false)
 
+    // useLocation to track the loacation of the page
+    const location = useLocation()
+
+    const isAboutPage = location.pathname === '/aboutPage'
+
     // inView state
     const [ ref, inView ] = useInView({
         triggerOnce: false,
@@ -59,16 +64,15 @@ export default function Header() {
 
     const buttonStyle = {
         background: isHover ? 'rgb(43, 19, 73, 0.8)' : 'none',
-        color: isHover ? '#fff' : '#2b1349',
-        border: '2px solid #2b1349',
+        color: isHover ? '#fff' : isAboutPage && !scrolled ? '#fff' : '#2b1349',
+        border: `2px solid ${isAboutPage && !scrolled ? '#fff' : '#2b1349'}`,
         padding: '5px 40px',
         borderRadius: '50px',
         cursor: 'pointer',
         transition: 'all 0.3s ease',
     }
     
-    // useLocation to track the loacation of the page
-    const location = useLocation()
+    
 
     // useEffect to hide the header when scrolling down
     useEffect(() => {
@@ -130,7 +134,7 @@ export default function Header() {
                     to={p.path}
                     // className={`${location.pathname === '/aboutPage' ? "text-white": ''}`}
                     style={{
-                        color: location.pathname === '/aboutPage' && !scrolled
+                        color: isAboutPage && !scrolled
                                 ? 'white' 
                                 : '#2b1349'
                     }}
