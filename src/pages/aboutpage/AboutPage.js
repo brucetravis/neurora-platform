@@ -24,7 +24,7 @@ export default function AboutPage() {
     <section className='about-page' ref={ref}>
       <div className='about-page-image'>
         <img 
-          src='https://i.pinimg.com/736x/23/19/cd/2319cd4c079fd5a272e28aeb0d94a13b.jpg'
+          src='https://i.pinimg.com/1200x/e7/42/c9/e742c913ef56ebf12922395de6c4a69f.jpg'
           alt='A team discussing analytics from AI'
         />
 
