@@ -1,0 +1,36 @@
+.hero-section {
+    background: rgb(242, 237, 245);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 100px 50px 100px;
+    clip-path: ellipse(100% 85% at 50% 15%);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 50px;
+    font-weight: 650;
+    margin: 0;
+    max-width: 500px;
+}
+
+.hero-section h1 span{
+    color: rgb(46, 23, 73);
+}
+
+
+.hero-section .right-column {
+    padding-left: 15vw
+}
+
+.hero-section .left-column .start {
+    margin-top: 3vh;
+}
+
+.hero-section .left-column .start span {
+    color: rgb(46, 23, 73);
+    font-weight: 650;
+}
+

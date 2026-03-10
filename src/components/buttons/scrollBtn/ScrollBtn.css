@@ -1,0 +1,23 @@
+.scrollBtn-div {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2
+}
+
+
+.scrollBtn-div .scrollBtn {
+    background: rgb(189, 187, 187);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(90, 89, 89, 0.3);
+    transition: all 0.3s ease;
+}
+
+.scrollBtn-div .scrollBtn:hover {
+    transform: scale(1.05);
+    cursor: pointer;;
+}
+
+
+

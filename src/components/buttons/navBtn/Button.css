@@ -1,0 +1,14 @@
+button {
+  background: rgb(71, 41, 107);
+  border: none;
+  padding: 15px 30px;
+  color: #fff;
+  margin-top: 5vh;
+  font-size: 14px;
+  transition: all 0.5s ease-in-out;
+}
+
+button:hover {
+  background: #2e1749;
+  cursor: pointer;
+}
