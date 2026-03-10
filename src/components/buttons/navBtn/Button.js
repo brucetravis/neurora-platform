@@ -2,7 +2,7 @@ import React from 'react'
 import './Button.css'
 import { useNavigate } from 'react-router-dom'
 
-export default function Button({ text }) {
+export default function Button({ text, link }) {
   // function to navigate to the next page
   const navigate = useNavigate()
   
@@ -10,7 +10,7 @@ export default function Button({ text }) {
   return (
     <div>
       <button
-        onClick={() => navigate}
+        onClick={() => navigate(link)}
       >
         { text }
       </button>
