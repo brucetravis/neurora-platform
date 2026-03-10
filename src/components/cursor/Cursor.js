@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './Cursor.css'
-import { Sparkles } from 'lucide-react'
 
 export default function Cursor() {
 
