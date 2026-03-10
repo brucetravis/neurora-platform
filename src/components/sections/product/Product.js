@@ -3,6 +3,7 @@ import './Product.css'
 import { useInView } from 'react-intersection-observer'
 import { useSpring, animated } from 'react-spring'
 import aiProducts from '../../../data/products'
+import { useNavigate } from 'react-router-dom'
 
 export default function Product() {
     // inView state
@@ -31,6 +32,9 @@ export default function Product() {
         opacity: inView ? 1 : 0,
         config: { mass: 1, tension: 80, friction: 25 }
     })
+
+    // function to navigate to another page
+    const navigate = useNavigate()
 
   return (
     <section className='product-section' ref={ref}>
@@ -68,6 +72,8 @@ export default function Product() {
             style={{
                 ...upSpring
             }}
+
+            onClick={() => navigate('/aboutPage')}
         >
             About Our Platform
         </animated.button>
