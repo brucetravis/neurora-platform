@@ -1,0 +1,39 @@
+.dashboard-container {
+    background: radial-gradient(circle at 85% 50%, #ffe9a8 0%, #f3f3f3 60%);
+    padding: 0px 20px 20px 20px;
+    height: 100vh;
+}
+
+
+.dashboard-container .user-information {
+   display: grid;
+   grid-template-columns: 3fr 1fr;
+   gap: 10px;
+   margin-top: 10px
+}
+
+.dashboard-container .user-information .dashboard-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px
+}
+
+.dashboard-container .user-information .dashboard-main .dashboard-row-1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px
+}
+
+
+.dashboard-container .user-information .contributions-dates {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.dashboard-container .user-information .dashboard-notifications {
+    display: flex;
+    flex-direction: column;
+}
+
+

@@ -151,6 +151,8 @@ export default function Header() {
             style={{
                 ...buttonSpring
             }}
+
+            className="d-flex align-items-center gap-2"
         >
             <button
                 className='login-btn'
@@ -161,6 +163,16 @@ export default function Header() {
             >
                 Login
             </button>
+            
+            <div 
+                className="user-header-image"
+                onClick={() => navigate('/useraccount')}
+            >
+                <img 
+                    src='https://i.pinimg.com/736x/4c/00/2a/4c002a9f9a5b2bbe84b688afb044accb.jpg'
+                    alt='User Profile'
+                />
+            </div>
         </animated.div>
     </header>
   )

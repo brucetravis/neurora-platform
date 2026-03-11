@@ -1,0 +1,49 @@
+.user-image {
+    width: 100%;
+    height: 240px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.user-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.user-image .user-name {
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(12px);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.user-image .user-name .price {
+    border: 2px solid #fff;
+    padding: 5px 10px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.user-image .user-name .price:hover {
+    cursor: pointer;
+    color: #333;
+    background: #fff;
+}
+
+.user-image .user-name .price p {
+    margin: 0
+}
+
+
