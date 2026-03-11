@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    background: #fff;
 }
 
 .whyus-section .left-column,
