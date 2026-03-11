@@ -5,8 +5,6 @@ import Button from '../../../components/buttons/Button'
 import { useInView } from 'react-intersection-observer'
 import { useSpring, animated } from 'react-spring'
 import Stats from '../../cards/herostats/Stats'
-// import { animated, useInView, useSpring } from 'react-spring'
-// import RobotGif from '../../../videos/robot-unscreen.gif'
 
 export default function Hero() {
     // In view state
@@ -66,15 +64,6 @@ export default function Hero() {
                 width: '100%'
             }}
         >
-            {/* <img 
-                src={RobotGif}
-                alt='AI Illustration'
-                style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover'
-                }}            
-            /> */}
 
             <img 
                 src={require('../../../images/buld-ai-removebg-preview.png')}
