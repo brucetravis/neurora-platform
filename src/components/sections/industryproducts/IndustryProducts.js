@@ -43,7 +43,7 @@ export default function IndustryProducts() {
     })
     
     // spring Id array
-    const springArray = [2, 4, 6, 8]
+    const springArray = [2, 4, 5, 7]
     
 
   return ( 
