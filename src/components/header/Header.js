@@ -63,8 +63,9 @@ export default function Header() {
     })
 
     const buttonStyle = {
-        background: isHover ? 'rgb(43, 19, 73, 0.8)' : 'none',
-        color: isHover ? '#fff' : isAboutPage && !scrolled ? '#fff' : '#2b1349',
+        background: isHover && isAboutPage ? '#fff' : isHover ? 'rgb(43, 19, 73, 0.8)' : 'none',
+        // color: isHover ? '#fff' : isAboutPage && !scrolled ? '#fff' : '#2b1349',
+        color: isHover && isAboutPage ? '#2b1349' : isHover ? '#fff' : isAboutPage && !scrolled ? '#fff' : '#2b1349',
         border: `2px solid ${isAboutPage && !scrolled ? '#fff' : '#2b1349'}`,
         padding: '5px 40px',
         borderRadius: '50px',
