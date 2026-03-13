@@ -65,19 +65,21 @@ export default function Registration() {
                 <p className='fw-bold'>or use your email for registration</p>
 
                 <div className='form-inputs'>
-                    <div className='input-icon'>
-                        <User2 
-                            size={20}
-                            stroke='#333'
-                            className='icon'
-                        />
+                    {isSignIn === false ? (
+                        <div className='input-icon'>
+                            <User2 
+                                size={20}
+                                stroke='#333'
+                                className='icon'
+                            />
 
-                        <input 
-                            type='name' 
-                            name='name'
-                            placeholder='Full Name'
-                        />
-                    </div>
+                            <input 
+                                type='name' 
+                                name='name'
+                                placeholder='Full Name'
+                            />
+                        </div>
+                    ) : ('')}
 
                     <div className='input-icon'>
                         <Mail 
