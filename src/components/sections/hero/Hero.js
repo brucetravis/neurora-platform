@@ -52,7 +52,7 @@ export default function Hero() {
             </div>
             <h1>Helping <span>African Businesses</span> Integrate AI into their workflows.</h1>
 
-            <Button text='Adopt with Neurora' />
+            <Button text='Adopt with Neurora' link='/adoption' />
 
             <p className='start'><span>Start Your Adoption Journey with Neurora.</span> For a better future.</p>
         </animated.div>
