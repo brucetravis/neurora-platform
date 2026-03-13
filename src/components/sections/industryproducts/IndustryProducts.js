@@ -49,7 +49,7 @@ export default function IndustryProducts() {
   return ( 
     <section className='industry-products-section' ref={ref}>
         <div 
-            className='d-flex align-items-center justify-content-between mb-2'
+            className='heading'
         >
             <animated.h2
                 className='title'
