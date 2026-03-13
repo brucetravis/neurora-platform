@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Adoption.css'
+import { useInView, useSpring, animated } from 'react-spring'
 
 export default function Adoption() {
 
@@ -25,9 +26,37 @@ export default function Adoption() {
     // state to switch the current input
     const [ currentInput, setCurrentInput ] = useState(adoptionInputs[0].id)
 
+    //  inView state
+    const [ ref, inView ] = useInView({
+        triggerOnce: false, // will be tirggeredwhen inView and when out of view
+        thershold: 0.1 // animation will be triggered when the section is 10% visible
+    })
+
+    // left colum spring
+    const leftSpring = useSpring({
+        transform: inView ? 'translateX(0%)' : 'translateX(-100%)',
+        opacity: inView ? 1 : 0,
+        config: { mass: 1, tension: 80, friction: 25 },
+        delay: 200
+    })
+    
+
+    // right spring
+    const rightSpring = useSpring({
+        transform: inView ? 'translateX(0%)' : 'translateX(100%)',
+        opacity: inView ? 1 : 0,
+        config: { mass : 1, tension: 80, friction: 25 },
+        delay: 200
+    })
+
   return (
-    <section className='adoption-page'>
-        <div className='adoption-inputs'>
+    <section className='adoption-page' ref={ref}>
+        <animated.div 
+            className='adoption-inputs'
+            style={{
+                ...leftSpring
+            }}
+        >
             <div className='adoption-text'>
                 <h3>Your Adoption Journey Starts here</h3>
                 <p>
@@ -111,15 +140,20 @@ export default function Adoption() {
                     </button>
                 </form>
             </div>
-        </div>
+        </animated.div>
 
-        <div className='adoption-image'>
+        <animated.div 
+            className='adoption-image'
+            style={{
+                ...rightSpring
+            }}
+        >
             <img 
                 src={require('../../images/adoption-image-2.png')}
                 alt='Cartoon working in an office'
                 className='adoption-image'
             />
-        </div>
+        </animated.div>
     </section>
   )
 }
