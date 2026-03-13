@@ -7,6 +7,7 @@ import AboutPage from './pages/aboutpage/AboutPage';
 import Header from './components/header/Header'
 import Registration from './pages/registration/Registration';
 import UserAccount from './pages/useraccount/UserAccount';
+import Adoption from './pages/adoption/Adoption';
 
 function App() {
   // useLocation to track the current locatio of the page
@@ -18,6 +19,7 @@ function App() {
         {location.pathname === '/userRegistration' ? ('') : (<Header />) }
         <Routes>
           <Route path='/' element={<Landing />} />
+          <Route path='/adoption' element={<Adoption />} />
           <Route path='/aboutPage' element={<AboutPage />} />
           <Route path='/useraccount' element={<UserAccount />} />
           <Route path='/userRegistration' element={<Registration />} />
