@@ -16,7 +16,8 @@ export default function Stats() {
     <div className='stats-card'>
         <div>
             {statImages.map((stat) => (
-                <img 
+                <img
+                    key={stat.id}
                     src={stat.image}
                     alt='stat pics'
                     className='stat-pics'
