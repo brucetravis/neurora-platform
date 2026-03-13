@@ -1,7 +1,7 @@
 .whyus-section {
     padding: 50px 50px 20px 50px;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     background: #fff;
 }
@@ -72,4 +72,138 @@
     top: 10vh;
     right: 1vw;
 }
+
+@media screen and (max-width: 992px) {
+    .whyus-section {
+        padding: 50px 50px 20px 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .whyus-section .left-column .chatImage,
+    .whyus-section .right-column .chatImage {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        position: absolute;
+        top: 40vh;
+        right: 5vw;
+    }
+
+    .whyus-section .right-column .deepseekImage {
+        height: 20vh;
+        width: 12vw;
+        object-fit: cover;
+        border-radius: 10px;
+        position: absolute;
+        top: 2vh;
+        right: 3vw;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .whyus-section {
+        padding: 50px 50px 20px 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .whyus-section .left-column .chatImage {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        position: absolute;
+        top: 3vh;
+        right: 15vw;
+    }
+
+    .whyus-section .right-column .chatImage {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        top: 30vh;
+        right: 15vw;
+    }
+
+    .whyus-section .left-column .aiCopilot {
+        height: 15vh;
+        width: 12vw;
+        top: 30vh;
+        right: 8vw;
+    }
+
+    .whyus-section .right-column .deepseekImage {
+        height: 20vh;
+        width: 12vw;
+        top: 2vh;
+        right: 3vw;
+    }
+}
+
+@media screen and (max-width: 462px) {
+    .whyus-section {
+        padding: 50px 15px 20px 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .whyus-section .left-column,
+    .whyus-section .right-column {
+        width: 100%;
+        border-radius: 10px;
+        padding: 50px 20px 50px 20px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .whyus-section .left-column h3,
+    .whyus-section .right-column h3 {
+        font-size: 20px;
+    }
+
+    .whyus-section .left-column p,
+    .whyus-section .right-column p {
+        font-size: 14px;
+    }
+
+    .whyus-section .left-column .chatImage {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+        position: absolute;
+        top: 3vh;
+        right: 5vw;
+    }
+
+    .whyus-section .right-column .chatImage {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        top: 35vh;
+        right: 10vw;
+    }
+
+    .whyus-section .left-column .aiCopilot {
+        height: 15vh;
+        width: 12vw;
+        top: 30vh;
+        right: 8vw;
+    }
+
+    .whyus-section .right-column .deepseekImage {
+        height: 15vh;
+        width: 18vw;
+        top: 2vh;
+        right: 3vw;
+    }
+}
+
+
 
