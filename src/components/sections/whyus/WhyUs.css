@@ -186,15 +186,15 @@
         border-radius: 50%;
         height: 50px;
         width: 50px;
-        top: 30vh;
+        top: 20vh;
         right: 10vw;
     }
 
     .whyus-section .left-column .aiCopilot {
         height: 15vh;
         width: 30vw;
-        top: 20vh;
-        right: 8vw;
+        top: 12vh;
+        right: 5vw;
     }
 
     .whyus-section .right-column .deepseekImage {
