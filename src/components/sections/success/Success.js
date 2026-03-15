@@ -50,7 +50,7 @@ export default function Success() {
             <h2>Success Stories</h2>
 
             <p>
-              Accelerate innovation with word-class tech teams beyong more stoic along goodness
+              Accelerate innovation with word-class analytics identifying the best products to scale.
             </p>
 
             <h6>James Smith </h6>
