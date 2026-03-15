@@ -43,6 +43,7 @@ export default function WhyUs() {
                 <h6>Get Started with</h6>
                 <h3>Entry Level Adoption</h3>
                 <p>If you want to get started in your Adoption Journey</p>
+
                 <Button text='Get Started' link='/adoption' />
             </div>
 
@@ -73,7 +74,8 @@ export default function WhyUs() {
                 <h6>Get Started with</h6>
                 <h3>Expert Level Adoption</h3>
                 <p>If you are wondering if the products you adopted are helping you.</p>
-                <Button text='Get Started' />
+                
+                <Button text='Get Started' link='/adoption' />
             </div>
 
             <div>

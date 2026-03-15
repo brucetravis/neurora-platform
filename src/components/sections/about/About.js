@@ -2,20 +2,13 @@ import React from 'react'
 import './About.css'
 import { useInView } from 'react-intersection-observer'
 import { useSpring, animated } from 'react-spring'
+import Button from '../../buttons/navBtn/Button'
 
 export default function About() {
     // inview for the content
     const [ ref, inView ] = useInView({
         triggerOnce: false, // trigger when it is not in View, meaning that It will hide the  content and show when necessary
         threshold: 0.1 // show when the section is 10% visible 
-    })
-
-    // titleSpring
-    const titleSpring = useSpring({
-        transform: inView ? 'translateY(0%)' : 'translateY(50%)', // hidden at the top
-        opacity: inView ? 1 : 0,
-        config: { mass: 1, tension: 80, friction: 25 },
-        delay: 200
     })
 
     // left section
@@ -35,21 +28,9 @@ export default function About() {
     })
     
   return (
-    <section className='about-section'>
-        <animated.h6 
-            className='title' 
-            ref={ref}
-            style={{
-                ...titleSpring,
-                width: '100%'
-            }}
-        >
-            About The Platform
-        </animated.h6>
-
+    <section className='about-section' ref={ref}>
         <div className='about-content'>
             <animated.div
-                ref={ref}
                 style={{
                     ...leftSection,
                     width: '100%'
@@ -64,7 +45,6 @@ export default function About() {
 
             
             <animated.div
-                ref={ref}
                 style={{
                     ...rightSection,
                     width: '100%'
@@ -83,6 +63,9 @@ export default function About() {
                     optimization, Neurora ensures businesses adopt AI efficiently, avoid wasted time and money, and stay competitive in the 
                     AI-driven market.
                 </p>
+                
+
+                <Button text='Adopt With Neurora' link='/adoption' />
             </animated.div>
         </div>
     </section>
