@@ -91,6 +91,12 @@
     box-shadow: -2px 4px 10px rgba(0 ,0 ,0, 0.3);
 }
 
+@media screen and (max-width: 462px) {
+    .header .user-header-image {
+        display: none;
+    }
+}
+
 
 
 
