@@ -12,14 +12,6 @@ export default function WhyUs() {
         threshold: 0.1
     })
 
-    // titleSpring
-    // const titleSpring = useSpring({
-    //     transform: inView ? 'translateY(0%)' : 'translateY(50%)', // hidden at the top
-    //     opacity: inView ? 1 : 0,
-    //     config: { mass: 1, tension: 80, friction: 25 },
-    //     delay: 200
-    // })
-
     // animated card up
     const leftSideSpring = useSpring({
         transform: inView ? 'translateY(0%)' : 'translateY(-50%)', // hidden at the top
@@ -51,7 +43,8 @@ export default function WhyUs() {
                 <h6>Get Started with</h6>
                 <h3>Entry Level Adoption</h3>
                 <p>If you want to get started in your Adoption Journey</p>
-                <Button text='Get Started' />
+
+                <Button text='Get Started' link='/adoption' />
             </div>
 
             <div>
@@ -81,7 +74,8 @@ export default function WhyUs() {
                 <h6>Get Started with</h6>
                 <h3>Expert Level Adoption</h3>
                 <p>If you are wondering if the products you adopted are helping you.</p>
-                <Button text='Get Started' />
+                
+                <Button text='Get Started' link='/adoption' />
             </div>
 
             <div>

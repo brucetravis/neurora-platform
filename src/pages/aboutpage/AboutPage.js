@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './AboutPage.css'
 import About from '../../components/sections/about/About'
 import { useInView } from 'react-intersection-observer'
@@ -19,6 +19,9 @@ export default function AboutPage() {
       delay: 200
   })
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }, [])
   
   return (
     <section className='about-page' ref={ref}>

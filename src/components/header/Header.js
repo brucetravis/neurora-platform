@@ -77,6 +77,9 @@ export default function Header() {
         transition: 'all 0.3s ease',
     }
     
+
+    // function to navigate to another page
+    const navigate = useNavigate()
     
 
     // useEffect to hide the header when scrolling down
@@ -162,12 +165,15 @@ export default function Header() {
             style={{
                 ...buttonSpring
             }}
+
+            className="d-flex align-items-center gap-2"
         >
             <button
                 className='login-btn'
                 style={buttonStyle}
                 onMouseEnter={() => setIsHover(true)}
                 onMouseLeave={() => setIsHover(false)}
+                onClick={() => navigate('/userRegistration')}
             >
                 Login
             </button>

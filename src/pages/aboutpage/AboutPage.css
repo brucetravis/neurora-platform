@@ -32,3 +32,11 @@
     width: 100%;
     object-fit: cover
 }
+
+@media screen and (max-width: 768px) {
+    .about-page .about-page-image .title {
+        font-size: 15px;
+    }
+}
+
+
