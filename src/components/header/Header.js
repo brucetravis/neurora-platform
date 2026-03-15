@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Header.css'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
 import { Menu, X } from 'lucide-react'
@@ -110,6 +110,8 @@ export default function Header() {
 
     }, [ lastScrollY])
 
+    const navigate = useNavigate()
+
   return (
     <header
         ref={ref}
@@ -169,6 +171,16 @@ export default function Header() {
             >
                 Login
             </button>
+
+            <div 
+                className="user-header-image"
+                onClick={() => navigate('/useraccount')}
+            >
+                <img 
+                    src='https://i.pinimg.com/736x/4c/00/2a/4c002a9f9a5b2bbe84b688afb044accb.jpg'
+                    alt='User Profile'
+                />
+            </div>
         </animated.div>
 
         {isOpen && (
