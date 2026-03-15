@@ -3,6 +3,7 @@ import './Header.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
+import { Menu, X } from 'lucide-react'
 
 export default function Header() {
     
@@ -26,6 +27,9 @@ export default function Header() {
     const [ scrolled, setScrolled ] = useState(false) // initially the user has not scrolled
 
     const [isHover, setIsHover] = useState(false)
+
+    // state to open and close the header on mobile
+    const [ isOpen, setIsOpen ] = useState(false) // initial state is false (meaning that the header is closed)
 
     // useLocation to track the loacation of the page
     const location = useLocation()
@@ -148,6 +152,13 @@ export default function Header() {
             ))}
         </animated.div>
 
+        <Menu 
+            size={30}
+            stroke='#333'
+            onClick={() => setIsOpen(true)} // open the header
+            className='open-mobile-icon'
+        />
+
         <animated.div
             style={{
                 ...buttonSpring
@@ -175,6 +186,32 @@ export default function Header() {
                 />
             </div>
         </animated.div>
+
+        {isOpen && (
+            <animated.nav
+                className={`mobile-nav`}
+                style={{
+                    ...linkSpring
+                }}
+            >
+                <X 
+                    size={30}
+                    stroke="#333"
+                    onClick={() => setIsOpen(false)} // close the header when the header is closed
+                    className='close-mobile-icon'
+                />
+
+                {pages.map((p) => (
+                    <Link
+                        key={p.id}
+                        to={p.path}
+                    >
+                        {p.name}
+                    </Link>
+                ))}
+
+            </animated.nav>
+        )}
     </header>
   )
 }
