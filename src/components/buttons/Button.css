@@ -12,3 +12,9 @@ button:hover {
   background: rgb(46, 23, 73);
   cursor: pointer;
 }
+
+@media screen and (max-width: 462px) {
+  button {
+    width: 100%;
+  }
+}
