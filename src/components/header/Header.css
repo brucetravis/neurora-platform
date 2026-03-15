@@ -156,5 +156,9 @@
         display: block;
         cursor: pointer;
     }
+
+    .header .user-header-image {
+        display: none;
+    }
 }
 

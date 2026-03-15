@@ -113,6 +113,8 @@ export default function Header() {
 
     }, [ lastScrollY])
 
+    const navigate = useNavigate()
+
   return (
     <header
         ref={ref}
@@ -175,7 +177,7 @@ export default function Header() {
             >
                 Login
             </button>
-            
+
             <div 
                 className="user-header-image"
                 onClick={() => navigate('/useraccount')}
