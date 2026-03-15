@@ -9,21 +9,8 @@ button {
 }
 
 button:hover {
-  background: #2e1749;
+  background: rgb(46, 23, 73);
   cursor: pointer;
-}
-
-@media screen and (max-width: 992px) {
-  button {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  button {
-    width: 100%;
-    padding: 10px 15px;
-  }
 }
 
 @media screen and (max-width: 462px) {

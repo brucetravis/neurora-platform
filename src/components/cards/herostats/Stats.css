@@ -26,3 +26,9 @@
     font-weight: 700;
 }
 
+@media screen and (max-width: 992px) {
+    .stats-card {
+        display: none;
+    }
+}
+

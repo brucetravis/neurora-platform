@@ -41,7 +41,8 @@ export default function ProductCategories() {
                 The trusted Platform transforming industries through AI adoption
             </h5>
 
-            <Button text="Start Your Adoption Journey" />
+            <Button text="Start Your Adoption Journey" link='/adoption' />
+              
         </animated.div>
 
         <animated.div 

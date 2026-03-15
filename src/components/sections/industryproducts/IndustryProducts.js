@@ -43,13 +43,13 @@ export default function IndustryProducts() {
     })
     
     // spring Id array
-    const springArray = [2, 4, 6, 8]
+    const springArray = [2, 4, 5, 7]
     
 
   return ( 
     <section className='industry-products-section' ref={ref}>
         <div 
-            className='d-flex align-items-center justify-content-between mb-2'
+            className='heading'
         >
             <animated.h2
                 className='title'

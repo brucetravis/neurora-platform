@@ -110,7 +110,6 @@
     border-top: 2px solid rgb(51, 51, 51, 0.3);
     padding: 30px;
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
 }
 
@@ -141,5 +140,41 @@
 .industry-card .card-footer input:hover {
     border: 1px solid #333;
     background: rgba(255, 255, 255, 0.2);
+}
+
+
+@media screen and (max-width: 992px) {
+    .industry-card .card-texts h5 {
+        font-size: 16px;
+    }
+
+    .industry-card .card-footer {
+        padding: 15px;
+    }
+
+    .industry-card .card-texts {
+        padding: 30px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+@media screen and (max-width: 462px) {
+    .industry-card .card-texts h5 {
+        font-size: 16px;
+    }
+
+    .industry-card .card-footer {
+        padding: 15px;
+    }
+
+    .industry-card .card-texts {
+        padding: 30px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 

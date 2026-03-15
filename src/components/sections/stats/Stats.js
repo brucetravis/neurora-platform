@@ -85,7 +85,7 @@ export default function AIStats() {
                             <h5>{counts[index]}</h5>
                             <p className='fs-1'>{s.suffix}</p>
                         </div>
-                        <p>{s.label}</p>
+                        <p className='suffix'>{s.label}</p>
                     </div>
                 </animated.div>
             )
