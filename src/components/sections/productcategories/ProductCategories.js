@@ -42,7 +42,7 @@ export default function ProductCategories() {
             </h5>
 
             <Button text="Start Your Adoption Journey" link='/adoption' />
-            
+              
         </animated.div>
 
         <animated.div 

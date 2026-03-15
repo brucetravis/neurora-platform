@@ -1,0 +1,20 @@
+button {
+  background: rgb(71, 41, 107);
+  border: none;
+  padding: 15px 30px;
+  color: #fff;
+  margin-top: 5vh;
+  font-size: 14px;
+  transition: all 0.5s ease-in-out;
+}
+
+button:hover {
+  background: rgb(46, 23, 73);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 462px) {
+  button {
+    width: 100%;
+  }
+}
