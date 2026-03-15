@@ -113,7 +113,6 @@ export default function Header() {
 
     }, [ lastScrollY])
 
-    const navigate = useNavigate()
 
   return (
     <header
