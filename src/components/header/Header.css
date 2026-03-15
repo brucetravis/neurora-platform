@@ -141,6 +141,7 @@
 @media screen and (max-width: 462px) {
     .header {
         padding: 20px;
+        width: 100vw;
     }
 
     .header .header-links {
